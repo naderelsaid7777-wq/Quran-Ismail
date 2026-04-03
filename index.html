@@ -4,196 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صدقة جارية | إسماعيل منصور عبد المطلب</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-blue: #001f3f;
-            --accent-gold: #d4af37;
-            --glass-bg: rgba(255, 255, 255, 
-    background-attachment: fixed;
-    
-     
         body {
-    background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('https://i.ibb.co/XkyYf7X9/image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #dfc27d;
-    font-family: 'Cairo', sans-serif;
-    margin: 0;
-    min-height: 100vh;
-}
-    
-            
-        
-        }
-
-        header {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 3px solid var(--accent-gold);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        h1 {
-            font-family: 'Amiri', serif;
-            color: var(--accent-gold);
+            background-image: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)), url('https://i.ibb.co/XkyYf7X9/image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #dfc27d;
+            font-family: 'Cairo', sans-serif;
             margin: 0;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 31, 63, 0.5);
+            width: 100%;
+            border-bottom: 2px solid #dfc27d;
         }
-
+        h1 { font-family: 'Amiri', serif; color: #dfc27d; font-size: 2.5rem; margin: 0; }
+        .container { max-width: 600px; width: 90%; margin-top: 30px; }
         .card {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(223, 194, 125, 0.3);
+            border-radius: 15px;
+            padding: 25px;
             margin-bottom: 20px;
             text-align: center;
+            backdrop-filter: blur(5px);
         }
-
         select {
             width: 100%;
             padding: 12px;
-            border-radius: 10px;
-            background: var(--primary-blue);
-            color: white;
-            border: 1px solid var(--accent-gold);
-            font-size: 1.1rem;
-            margin: 10px 0;
-            cursor: pointer;
-        }
-
-        #quranText {
-            font-family: 'Amiri', serif;
-            font-size: 1.8rem;
-            line-height: 2.5;
-            text-align: justify;
-            background: #fff;
-            color: #222;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 20px;
-            max-height: 500px;
-            overflow-y: auto;
-            display: none;
-        }
-
-        audio {
-            width: 100%;
-            margin-top: 20px;
-            filter: sepia(20%) saturate(70%) grayscale(1) contrast(90%) invert(100%);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            color: var(--accent-gold);
-        }
-
-        .btn {
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            border: none;
-            padding: 10px 25px;
             border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-top: 15px;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            background: #f1c40f;
+            background: #001f3f;
+            color: white;
+            border: 1px solid #dfc27d;
+            font-size: 1.1rem;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>إسماعيل منصور عبد المطلب</h1>
-    <p>اللهم اجعل القران العظيم ربيع قلبه ونور صدره وجلاء حزنه</p>
-</header>
-
-<div class="container">
-    <!-- قسم الاستماع -->
-    <div class="card">
-        <h2 style="color: var(--accent-gold);">المصحف المسموع</h2>
-        <select id="surahSelectAudio">
-            <option value="">اختر السورة للاستماع</option>
-        </select>
-        <audio id="mainAudio" controls></audio>
+    <div class="header">
+        <h1>إسماعيل منصور عبد المطلب</h1>
+        <p>اللهم اجعل القرآن العظيم ربيع قلبه ونور صدره</p>
     </div>
-
-    <!-- قسم القراءة -->
-    <div class="card">
-        <h2 style="color: var(--accent-gold);">المصحف المقرء</h2>
-        <select id="surahSelectRead">
-            <option value="">اختر السورة للقراءة</option>
-        </select>
-        <div id="quranText"></div>
+    <div class="container">
+        <div class="card">
+            <h2 style="color: #dfc27d;">المصحف المسموع</h2>
+            <select id="audioSelect"><option>اختر السورة للاستماع</option></select>
+            <audio id="audioPlayer" controls style="width: 100%; margin-top: 20px;"></audio>
+        </div>
     </div>
-</div>
-
-<footer>
-    <p>صدقة جارية | 2026</p>
-    <p>نسألكم الدعاء بالرحمة والمغفرة</p>
-</footer>
-
-<script>
-    const surahSelectAudio = document.getElementById('surahSelectAudio');
-    const surahSelectRead = document.getElementById('surahSelectRead');
-    const mainAudio = document.getElementById('mainAudio');
-    const quranText = document.getElementById('quranText');
-
-    // جلب قائمة السور عند تحميل الصفحة
-    async function loadSurahs() {
-        const res = await fetch('https://api.alquran.cloud/v1/surah');
-        const data = await res.json();
-        data.data.forEach(surah => {
-            let opt = `<option value="${surah.number}">${surah.number} - ${surah.name}</option>`;
-            surahSelectAudio.innerHTML += opt;
-            surahSelectRead.innerHTML += opt;
-        });
-    }
-
-    // تشغيل الصوت
-    surahSelectAudio.addEventListener('change', (e) => {
-        if(e.target.value) {
-            const surahNum = e.target.value.padStart(3, '0');
-            // رابط صوتي مباشر (الشيخ ماهر المعيقلي كمثال)
-            mainAudio.src = `https://server12.mp3quran.net/maher/${surahNum}.mp3`;
-            mainAudio.play();
-        }
-    });
-
-    // جلب نص السورة للقراءة
-    surahSelectRead.addEventListener('change', async (e) => {
-        if(e.target.value) {
-            quranText.style.display = 'block';
-            quranText.innerHTML = "جاري تحميل الآيات...";
-            const res = await fetch(`https://api.alquran.cloud/v1/surah/${e.target.value}`);
-            const data = await res.json();
-            let text = data.data.ayahs.map(a => `<span style="color:var(--accent-gold)">(${a.numberInSurah})</span> ${a.text}`).join(' ');
-            quranText.innerHTML = `<h3 style="text-align:center">${data.data.name}</h3>` + text;
-        } else {
-            quranText.style.display = 'none';
-        }
-    });
-
-    loadSurahs();
-</script>
-
 </body>
 </html>
